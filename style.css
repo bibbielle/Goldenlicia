@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-base: #4E1F00;
+    --cor-destaque: #944C48;
+    --cor-neutra: #F7F7F7;
+    --cor-fundo: #FCEFCB;
+}
+
+html, body {
+    height: 100%;
+    font-family: "K2D", sans-serif;
+    background: linear-gradient(to bottom, #FAD59A, #FCEFCB, #FAD59A);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3% 0 5% 0;  /* Remove margens laterais para evitar overflow */
+    padding: 0 10%;      /* Usa padding para espaçamento lateral interno */
+    width: 100%;
+}
+.cabecalho__logo {
+    width: 100px;
+    height: 100px;
+}
+
+.cabecalho__links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.cabecalho__links__clicavel {
+    text-decoration: none;
+    color: var(--cor-base);
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 400ms ease, color 400ms ease;
+}
+
+.cabecalho__links__clicavel:hover {
+    background-color: var(--cor-base);
+    color: var(--cor-fundo);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 5%;
+    color: var(--cor-base);
+    font-size: 0.93rem;
+}
+
+.rodape__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape__lista__item {
+    color: var(--cor-base);
+    text-decoration: none;
+}
+
+a.rodape__lista__item:hover {
+    color: var(--cor-fundo);
+}
+.rodape__logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        margin: 5% 5%;  /* reduz margem lateral para evitar corte */
+        padding: 0 5%;  /* adiciona padding para manter espaçamento */
+    }
+
+    .cabecalho__links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cabecalho__links__clicavel {
+        font-size: 1.2rem;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .rodape__lista {
+        align-items: center;
+    }
+}

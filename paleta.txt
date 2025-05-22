@@ -1,0 +1,5 @@
+:root {
+    --cor-base:#4E1F00;
+    --cor-destaque: #944C48;
+    --cor--neutra: #F7F7F7;
+}
